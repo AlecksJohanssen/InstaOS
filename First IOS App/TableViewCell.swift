@@ -19,8 +19,12 @@ class TableViewCell: UITableViewCell {
             let image_url = data_key?["standard_resolution"] as? NSDictionary
             let url = URL(string: image_url!["url"] as! String)
             imgView.setImageWith(url!)
+            //imgView.contentMode = .scaleAspectFit
+            imgView.backgroundColor = UIColor.blue
         }
     }
+    
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()

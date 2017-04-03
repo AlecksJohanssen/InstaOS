@@ -56,6 +56,7 @@ class PhotosViewController: UIViewController,UITableViewDataSource, UITableViewD
         return cell
     }
     
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return photos.count
     }
