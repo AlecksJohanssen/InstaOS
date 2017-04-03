@@ -11,6 +11,17 @@ import UIKit
 class TableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
 
+    @IBOutlet weak var imgView: UIImageView!
+    //var data: NSDictionary!
+    var data: NSDictionary! {
+        didSet {
+            let data_key = data["images"] as? NSDictionary
+            let image_url = data_key?["standard_resolution"] as? NSDictionary
+            let url = URL(string: image_url!["url"] as! String)
+            imgView.setImageWith(url!)
+        }
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

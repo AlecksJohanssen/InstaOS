@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import AFNetworking
+
 
 class PhotosViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     var photos = [NSDictionary]()
@@ -15,6 +17,7 @@ class PhotosViewController: UIViewController,UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.rowHeight = 320;
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         let userId = "3021318827"
@@ -49,17 +52,7 @@ class PhotosViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "com.coderschool.TableViewCell", for: indexPath) as! TableViewCell
-        for key in photos as NSArray  { // loop through data items
-            let data = key as! NSDictionary
-            let data_key = data["caption"] as? NSDictionary
-            let data_caption_key = data_key?["from"] as? NSDictionary
-            if data_caption_key != nil {
-                self.name = data_caption_key?["full_name"] as! String
-            } else {
-                print("No data")
-            }
-        }
-        cell.nameLabel.text = name
+        cell.data = photos[indexPath.row] as NSDictionary
         return cell
     }
     
