@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "First IOS App/PhotosViewController.swift"
-            timestampString = "512886236.221415"
+            timestampString = "513581537.033697"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "43"
-            endingLineNumber = "43"
+            startingLineNumber = "42"
+            endingLineNumber = "42"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,134 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "First IOS App/PhotosViewController.swift"
-            timestampString = "512886236.221415"
+            timestampString = "513581537.033697"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "First IOS App/TableViewCell.swift"
+            timestampString = "513581537.033697"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "First_IOS_App.TableViewCell.__deallocating_deinit"
+                  moduleName = "First IOS App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/AlecksJohanssen/Desktop/Swift/First%20IOS%20App/First%20IOS%20App/TableViewCell.swift"
+                  timestampString = "513581022.027168"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "First_IOS_App.TableViewCell.init (style : __C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; First_IOS_App.TableViewCell"
+                  moduleName = "First IOS App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/AlecksJohanssen/Desktop/Swift/First%20IOS%20App/First%20IOS%20App/TableViewCell.swift"
+                  timestampString = "513581022.035759"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "70">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "First_IOS_App.TableViewCell.__allocating_init (style : __C.UITableViewCellStyle, reuseIdentifier : Swift.Optional&lt;Swift.String&gt;) -&gt; First_IOS_App.TableViewCell"
+                  moduleName = "First IOS App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/AlecksJohanssen/Desktop/Swift/First%20IOS%20App/First%20IOS%20App/TableViewCell.swift"
+                  timestampString = "513581022.039538"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "First_IOS_App.TableViewCell.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;First_IOS_App.TableViewCell&gt;"
+                  moduleName = "First IOS App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/AlecksJohanssen/Desktop/Swift/First%20IOS%20App/First%20IOS%20App/TableViewCell.swift"
+                  timestampString = "513581022.041582"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "First_IOS_App.TableViewCell.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;First_IOS_App.TableViewCell&gt;"
+                  moduleName = "First IOS App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/AlecksJohanssen/Desktop/Swift/First%20IOS%20App/First%20IOS%20App/TableViewCell.swift"
+                  timestampString = "513581022.043572"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "31">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "First IOS App/PhotosViewController.swift"
+            timestampString = "513581537.033697"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "First IOS App/PhotosViewController.swift"
+            timestampString = "513581537.033697"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
             landmarkName = "viewDidLoad()"
             landmarkType = "7">
          </BreakpointContent>

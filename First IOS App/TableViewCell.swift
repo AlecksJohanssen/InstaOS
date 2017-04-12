@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Alamofire
+import AlamofireImage
+
 
 class TableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
@@ -16,14 +19,20 @@ class TableViewCell: UITableViewCell {
     var data: NSDictionary! {
         didSet {
             let data_key = data["images"] as? NSDictionary
+            print(data_key)
             let image_url = data_key?["standard_resolution"] as? NSDictionary
             let url = URL(string: image_url!["url"] as! String)
-            imgView.setImageWith(url!)
-            //imgView.contentMode = .scaleAspectFit
+            Alamofire.request(url!).responseImage { response in
+                debugPrint(response)
+                if let image = response.result.value {
+                    let size = CGSize(width: 351.0, height: 351.0)
+                    let scaledImage = image.af_imageAspectScaled(toFit: size)
+                    self.imgView.image = scaledImage
+                }
+            }
             imgView.backgroundColor = UIColor.blue
         }
     }
-    
     
     
     override func awakeFromNib() {
