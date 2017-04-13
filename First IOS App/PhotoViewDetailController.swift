@@ -10,7 +10,11 @@ import UIKit
 
 class PhotoViewDetailController: UIViewController {
 
-    var photo: NSDictionary?
+    var photo: NSDictionary! {
+        didSet {
+            print(photo)
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
