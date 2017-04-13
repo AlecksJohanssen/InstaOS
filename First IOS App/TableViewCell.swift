@@ -15,7 +15,7 @@ class TableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
 
     @IBOutlet weak var imgView: UIImageView!
-    //var data: NSDictionary!
+    
     var data: NSDictionary! {
         didSet {
             let data_key = data["images"] as? NSDictionary
@@ -30,7 +30,6 @@ class TableViewCell: UITableViewCell {
                     self.imgView.image = scaledImage
                 }
             }
-            imgView.backgroundColor = UIColor.blue
         }
     }
     

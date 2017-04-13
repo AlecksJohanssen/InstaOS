@@ -33,8 +33,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="518.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuK-2C-oRp" customClass="nameLabel">
-                                                    <rect key="frame" x="0.0" y="0.0" width="39" height="21"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="too-cute-doggone-it-video-playlist" translatesAutoresizingMaskIntoConstraints="NO" id="rDt-tg-zLD" customClass="imgView">
+                                                    <rect key="frame" x="0.0" y="107" width="342" height="411"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuK-2C-oRp" customClass="nameLabel">
+                                                    <rect key="frame" x="93" y="25" width="39" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="PXo-Kb-xZf"/>
                                                     </constraints>
@@ -42,13 +45,9 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="too-cute-doggone-it-video-playlist" translatesAutoresizingMaskIntoConstraints="NO" id="rDt-tg-zLD" customClass="imgView">
-                                                    <rect key="frame" x="0.0" y="20" width="342" height="498.5"/>
-                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="AuK-2C-oRp" firstAttribute="top" secondItem="53L-Ik-jyG" secondAttribute="top" id="SCc-yH-yyA"/>
-                                                <constraint firstItem="rDt-tg-zLD" firstAttribute="top" secondItem="AuK-2C-oRp" secondAttribute="bottom" constant="-1" id="gK4-Eq-v7c"/>
                                                 <constraint firstItem="AuK-2C-oRp" firstAttribute="leading" secondItem="53L-Ik-jyG" secondAttribute="leading" id="hn7-we-qPR"/>
                                                 <constraint firstAttribute="trailing" secondItem="rDt-tg-zLD" secondAttribute="trailing" id="qEe-L0-KdS"/>
                                                 <constraint firstItem="rDt-tg-zLD" firstAttribute="leading" secondItem="53L-Ik-jyG" secondAttribute="leading" id="sU3-Ok-bJp"/>

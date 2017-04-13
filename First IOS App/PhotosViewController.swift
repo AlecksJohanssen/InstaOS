@@ -89,6 +89,28 @@ class PhotosViewController: UIViewController,UITableViewDataSource, UITableViewD
         print("deselect")
     }
     
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        tableView.sectionHeaderHeight = 70
+        return tableView.sectionHeaderHeight
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = UIView(frame: CGRect(x: 0, y: 0, width: 320, height: 50))
+        headerView.backgroundColor = UIColor(white: 1, alpha: 0.9)
+        let profileView = UIImageView(frame: CGRect(x: 10, y: 10, width: 30, height: 30))
+        profileView.clipsToBounds = true
+        profileView.layer.cornerRadius = 15
+        profileView.layer.borderColor = UIColor(white: 0.7, alpha: 0.8).cgColor
+        profileView.layer.borderWidth = 1
+        let url = URL(string: "https://scontent.cdninstagram.com/t51.2885-19/s150x150/17662850_1755198108129235_8707994940795256832_a.jpg")
+        profileView.setImageWith(url!)
+        headerView.addSubview(profileView)
+        return headerView
+
+    }
+    
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "com.coderschool.TableViewCell", for: indexPath) as! TableViewCell
 //        cell.selectionStyle = UITableViewCellSelectionStyle.none
