@@ -48,7 +48,18 @@ class PhotosViewController: UIViewController,UITableViewDataSource, UITableViewD
             })
             task.resume()
         }
+        
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextScene = segue.destination as! PhotoViewDetailController
+        var indexPath = tableView.indexPath(for: sender as! UITableViewCell)
+        let selectedScene = photos[(indexPath?.row)!]
+        nextScene.photo = selectedScene
+    }
+    
+    
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "com.coderschool.TableViewCell", for: indexPath) as! TableViewCell

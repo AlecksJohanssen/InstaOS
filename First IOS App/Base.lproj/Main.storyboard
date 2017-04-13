@@ -26,11 +26,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="default" indentationWidth="10" reuseIdentifier="com.coderschool.TableViewCell" rowHeight="519" id="BsE-Dq-IQk" customClass="TableViewCell" customModule="First_IOS_App" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFit" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="com.coderschool.TableViewCell" rowHeight="519" id="BsE-Dq-IQk" customClass="TableViewCell" customModule="First_IOS_App" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="519"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" tableViewCell="BsE-Dq-IQk" id="53L-Ik-jyG" customClass="contentView">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="518.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="518.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuK-2C-oRp" customClass="nameLabel">
@@ -43,7 +43,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="too-cute-doggone-it-video-playlist" translatesAutoresizingMaskIntoConstraints="NO" id="rDt-tg-zLD" customClass="imgView">
-                                                    <rect key="frame" x="0.0" y="20" width="375" height="498.5"/>
+                                                    <rect key="frame" x="0.0" y="20" width="342" height="498.5"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
@@ -58,6 +58,7 @@
                                         <connections>
                                             <outlet property="imgView" destination="rDt-tg-zLD" id="aRU-xU-AEV"/>
                                             <outlet property="nameLabel" destination="AuK-2C-oRp" id="7WE-K3-Lfe"/>
+                                            <segue destination="poM-eY-1Ua" kind="push" id="k2g-PT-iMj"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -74,32 +75,24 @@
             </objects>
             <point key="canvasLocation" x="110.5" y="130.5"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Y8j-f5-ppn">
+        <!--Photo View Detail Controller-->
+        <scene sceneID="ilh-4R-cH0">
             <objects>
-                <viewController id="5MP-jT-289" sceneMemberID="viewController">
+                <viewController id="poM-eY-1Ua" customClass="PhotoViewDetailController" customModule="First_IOS_App" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ENK-l8-Y6v"/>
-                        <viewControllerLayoutGuide type="bottom" id="Pie-er-Kf3"/>
+                        <viewControllerLayoutGuide type="top" id="PVE-ct-2Nj"/>
+                        <viewControllerLayoutGuide type="bottom" id="qOd-tJ-gaN"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="1Qq-G5-vL0" customClass="PhotoViewDetailController" customModule="First_IOS_App" customModuleProvider="target">
+                    <view key="view" contentMode="scaleToFill" id="LBG-NC-wLK">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qqy-h9-CPH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="411"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <connections>
-                            <outlet property="imgView" destination="qqy-h9-CPH" id="GCg-De-cHt"/>
-                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" id="9lG-qp-3YX"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tmc-TB-qm0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JGu-sV-2dx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="642.5" y="130.5"/>
+            <point key="canvasLocation" x="599" y="131"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Bku-kT-lOc">

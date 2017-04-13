@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "PhotoViewDetailController.viewDidLoad() -&gt; ():PhotoViewDetailController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "photo">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "PhotosViewController.prepare(for : UIStoryboardSegue, sender : Any?) -&gt; ():PhotosViewController.swift">
+      </ContextState>
+      <ContextState
+         contextName = "PhotoViewDetailController.photo.didset:PhotoViewDetailController.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "photo">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>
