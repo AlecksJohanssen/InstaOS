@@ -48,6 +48,28 @@ class PhotosViewController: UIViewController,UITableViewDataSource, UITableViewD
             })
             task.resume()
         }
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), for: UIControlEvents.valueChanged)
+        tableView.addSubview(refreshControl)
+    }
+    
+    func refreshControlAction(_ refreshControl: UIRefreshControl) {
+        let userId = "3021318827"
+        let accessToken = "3021318827.1677ed0.e40de3cbc0be4e4cb64e102f79a61368"
+        let url = URL(string: "https://api.instagram.com/v1/users/\(userId)/media/recent/?access_token=\(accessToken)")
+        let session = URLSession(configuration: .default, delegate: nil, delegateQueue: OperationQueue.main)
+        let request = URLRequest(
+            url: url!,
+            cachePolicy: NSURLRequest.CachePolicy.reloadIgnoringLocalCacheData,
+            timeoutInterval: 10)
+        let task: URLSessionTask = session.dataTask(with: request) {
+            (data: Data?,
+            response: URLResponse?,
+            error: Error?) in
+            self.tableView.reloadData()
+            refreshControl.endRefreshing()
+        }
+        task.resume()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
