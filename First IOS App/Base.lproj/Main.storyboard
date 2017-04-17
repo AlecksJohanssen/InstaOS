@@ -33,8 +33,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="518.5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="too-cute-doggone-it-video-playlist" translatesAutoresizingMaskIntoConstraints="NO" id="rDt-tg-zLD" customClass="imgView">
-                                                    <rect key="frame" x="0.0" y="107" width="342" height="411"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="too-cute-doggone-it-video-playlist" translatesAutoresizingMaskIntoConstraints="NO" id="rDt-tg-zLD" customClass="imgView">
+                                                    <rect key="frame" x="0.0" y="107" width="342" height="274"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuK-2C-oRp" customClass="nameLabel">
                                                     <rect key="frame" x="93" y="25" width="39" height="21"/>
@@ -51,7 +51,6 @@
                                                 <constraint firstItem="AuK-2C-oRp" firstAttribute="leading" secondItem="53L-Ik-jyG" secondAttribute="leading" id="hn7-we-qPR"/>
                                                 <constraint firstAttribute="trailing" secondItem="rDt-tg-zLD" secondAttribute="trailing" id="qEe-L0-KdS"/>
                                                 <constraint firstItem="rDt-tg-zLD" firstAttribute="leading" secondItem="53L-Ik-jyG" secondAttribute="leading" id="sU3-Ok-bJp"/>
-                                                <constraint firstAttribute="bottom" secondItem="rDt-tg-zLD" secondAttribute="bottom" id="zDV-co-r9o"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

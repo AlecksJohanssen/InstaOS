@@ -16,6 +16,9 @@ class PhotosViewController: UIViewController,UITableViewDataSource, UITableViewD
     var isMoreDataLoading = false
     var isLoadingOnce = false
     var loadMoreURL: URL?
+    var loadingMoreView: InfiniteScrollActivityView?
+    var numberOfImageViews: Int = 20
+    
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         tableView.dataSource = self
@@ -26,6 +29,13 @@ class PhotosViewController: UIViewController,UITableViewDataSource, UITableViewD
         let refreshControl = UIRefreshControl()
         refreshControl.addTarget(self, action: #selector(refreshControlAction(_:)), for: UIControlEvents.valueChanged)
         tableView.addSubview(refreshControl)
+        let frame = CGRect(x: 0, y: tableView.contentSize.height, width: tableView.bounds.size.width, height: InfiniteScrollActivityView.defaultHeight)
+        loadingMoreView = InfiniteScrollActivityView(frame: frame)
+        loadingMoreView!.isHidden = true
+        tableView.addSubview(loadingMoreView!)
+        var insets = tableView.contentInset
+        insets.bottom += InfiniteScrollActivityView.defaultHeight
+        tableView.contentInset = insets
     }
     
     func refreshControlAction(_ refreshControl: UIRefreshControl) {
@@ -45,6 +55,11 @@ class PhotosViewController: UIViewController,UITableViewDataSource, UITableViewD
             refreshControl.endRefreshing()
         }
         task.resume()
+    }
+    
+    func delay(after wait: TimeInterval, closure: @escaping () -> Void) {
+        let queue = DispatchQueue.main
+        queue.asyncAfter(deadline: DispatchTime.now() + wait, execute: closure)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -106,8 +121,10 @@ class PhotosViewController: UIViewController,UITableViewDataSource, UITableViewD
             let scrollOffThreshold = scrollViewContentHeight - tableView.bounds.size.height
             if(scrollView.contentOffset.y > scrollOffThreshold && tableView.isDragging) {
                 isMoreDataLoading = true
+                let frame = CGRect(x: 0, y: tableView.contentSize.height, width: tableView.bounds.size.width, height: InfiniteScrollActivityView.defaultHeight)
+                loadingMoreView?.frame = frame
+                loadingMoreView!.startAnimating()
                 loadMoreData()
-                
             }
         }
     }
@@ -127,11 +144,17 @@ class PhotosViewController: UIViewController,UITableViewDataSource, UITableViewD
                 with: request,
                 completionHandler: { (dataOrNil, response, error ) in
                     if let data = dataOrNil {
-                        if let responseDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as? NSDictionary {
+                        if let responseDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as? [String:AnyObject] {
+                            let paginationURL = responseDictionary["pagination"]
+                            var pagiURL = paginationURL?["next_url"] as? String
+                            self.loadMoreURL = URL(string: pagiURL!)
                             if let photoData = responseDictionary["data"] as? [NSDictionary] {
-                                self.photos = photoData
+                                for item in photoData { // loop through data items
+                                    let obj = item as NSDictionary
+                                    self.photos.append(obj)
+                                }
                                 self.isMoreDataLoading = false
-                                print(photoData)
+                                self.loadingMoreView!.stopAnimating()
                                 self.tableView.reloadData()
                             }
                         }
@@ -175,7 +198,9 @@ class PhotosViewController: UIViewController,UITableViewDataSource, UITableViewD
             })
             task.resume()
         }
+        
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

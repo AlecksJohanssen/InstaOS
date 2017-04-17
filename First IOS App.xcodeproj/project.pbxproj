@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7083106437CFD0DD93152C16 /* Pods_First_IOS_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A47058FB6D7093F76920A4C /* Pods_First_IOS_App.framework */; };
+		961D74EF1EA48498003F40E1 /* InfiniteScrollActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 961D74EE1EA48498003F40E1 /* InfiniteScrollActivityView.swift */; };
 		964685651E9E226B00232A6B /* PhotoViewDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 964685641E9E226B00232A6B /* PhotoViewDetailController.swift */; };
 		967DF7721E8909AB004538AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DF7711E8909AB004538AF /* AppDelegate.swift */; };
 		967DF7741E8909AB004538AF /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 967DF7731E8909AB004538AF /* PhotosViewController.swift */; };
@@ -46,6 +47,8 @@
 		5A47058FB6D7093F76920A4C /* Pods_First_IOS_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_First_IOS_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6EBA385C096E147E0DFC42AD /* Pods-First IOS AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-First IOS AppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-First IOS AppTests/Pods-First IOS AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8DD0122371FE32293C08D236 /* Pods_First_IOS_AppUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_First_IOS_AppUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		961D74EA1EA48481003F40E1 /* First IOS App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "First IOS App-Bridging-Header.h"; sourceTree = "<group>"; };
+		961D74EE1EA48498003F40E1 /* InfiniteScrollActivityView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfiniteScrollActivityView.swift; sourceTree = "<group>"; };
 		964685641E9E226B00232A6B /* PhotoViewDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewDetailController.swift; sourceTree = "<group>"; };
 		967DF76E1E8909AB004538AF /* First IOS App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "First IOS App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		967DF7711E8909AB004538AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +142,8 @@
 				967DF77A1E8909AB004538AF /* LaunchScreen.storyboard */,
 				967DF77D1E8909AB004538AF /* Info.plist */,
 				96DE18531E8B77BE0098D86E /* TableViewCell.swift */,
+				961D74EA1EA48481003F40E1 /* First IOS App-Bridging-Header.h */,
+				961D74EE1EA48498003F40E1 /* InfiniteScrollActivityView.swift */,
 			);
 			path = "First IOS App";
 			sourceTree = "<group>";
@@ -248,6 +253,7 @@
 				TargetAttributes = {
 					967DF76D1E8909AA004538AF = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					967DF7811E8909AB004538AF = {
@@ -452,6 +458,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				961D74EF1EA48498003F40E1 /* InfiniteScrollActivityView.swift in Sources */,
 				96DE18541E8B77BE0098D86E /* TableViewCell.swift in Sources */,
 				967DF7741E8909AB004538AF /* PhotosViewController.swift in Sources */,
 				964685651E9E226B00232A6B /* PhotoViewDetailController.swift in Sources */,
@@ -608,10 +615,13 @@
 			baseConfigurationReference = 2E8F2B2F219CA605D3B0A1C6 /* Pods-First IOS App.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "First IOS App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cc.First-IOS-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "First IOS App/First IOS App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -621,10 +631,12 @@
 			baseConfigurationReference = C33FD1ECD046AEE19190542C /* Pods-First IOS App.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "First IOS App/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "cc.First-IOS-App";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "First IOS App/First IOS App-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
