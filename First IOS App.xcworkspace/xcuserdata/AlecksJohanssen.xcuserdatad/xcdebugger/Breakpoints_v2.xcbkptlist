@@ -110,5 +110,114 @@
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "First IOS App/PhotosViewController.swift"
+            timestampString = "514090778.00047"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "PhotosViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "First_IOS_App.PhotosViewController.__deallocating_deinit"
+                  moduleName = "First IOS App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/AlecksJohanssen/Desktop/Swift/First%20IOS%20App/First%20IOS%20App/PhotosViewController.swift"
+                  timestampString = "514090779.448685"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "First_IOS_App.PhotosViewController.init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; First_IOS_App.PhotosViewController"
+                  moduleName = "First IOS App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/AlecksJohanssen/Desktop/Swift/First%20IOS%20App/First%20IOS%20App/PhotosViewController.swift"
+                  timestampString = "514090779.451523"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "First_IOS_App.PhotosViewController.__allocating_init (nibName : Swift.Optional&lt;Swift.String&gt;, bundle : Swift.Optional&lt;__ObjC.Bundle&gt;) -&gt; First_IOS_App.PhotosViewController"
+                  moduleName = "First IOS App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/AlecksJohanssen/Desktop/Swift/First%20IOS%20App/First%20IOS%20App/PhotosViewController.swift"
+                  timestampString = "514090779.45323"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "23">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "First_IOS_App.PhotosViewController.__allocating_init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;First_IOS_App.PhotosViewController&gt;"
+                  moduleName = "First IOS App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/AlecksJohanssen/Desktop/Swift/First%20IOS%20App/First%20IOS%20App/PhotosViewController.swift"
+                  timestampString = "514090779.454888"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "First_IOS_App.PhotosViewController.init (coder : __ObjC.NSCoder) -&gt; Swift.Optional&lt;First_IOS_App.PhotosViewController&gt;"
+                  moduleName = "First IOS App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/AlecksJohanssen/Desktop/Swift/First%20IOS%20App/First%20IOS%20App/PhotosViewController.swift"
+                  timestampString = "514090779.456415"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "14"
+                  endingLineNumber = "14"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "First IOS App/PhotosViewController.swift"
+            timestampString = "514094754.794813"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
+            landmarkName = "loadData()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>
